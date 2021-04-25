@@ -1,0 +1,25 @@
+@import './normalize';
+
+@import './variables';
+
+@import 'base/base';
+
+@import './vendor/swiper';
+
+@import './base/animations';
+@import './base/typography';
+
+// Components
+@import './components/header';
+@import './components/navigation';
+@import './components/button';
+
+@import './components/slide-section';
+@import './components/social-feed';
+@import './components/footer';
+@import './components/loader';
+
+// pages
+
+@import './pages/page';
+@import './pages/team';

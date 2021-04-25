@@ -1,0 +1,62 @@
+body {
+  font-family: $fontPrimary;
+}
+
+.slide-section__heading,
+.page-meta__title h2 {
+  font-family: $fontPrimary;
+  color: $colorGold;
+  font-size: 80px;
+  line-height: 70px;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 25px;
+
+  & span {
+    font-size: 40px;
+  }
+}
+
+.page-meta__caption,
+.page-meta__caption--right {
+  font-size: 24px;
+  line-height: 33px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.slide-section__desc {
+  font-family: $fontPrimary;
+  color: #fff;
+  font-size: 24px;
+  line-height: 43px;
+  font-weight: 400;
+}
+
+.page__desc {
+  font-family: $fontSecondary;
+  color: #fff;
+  font-size: 24px;
+  line-height: 43px;
+  font-weight: 400;
+
+  &.page__desc--sf {
+    //smaller font
+    font-size: 22px;
+    font-weight: 300;
+  }
+}
+
+.page__heading {
+  font-size: 38px;
+  line-height: 45px;
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.color-l-gray {
+  color: #a7a7a7;
+  font-size: 24px;
+}

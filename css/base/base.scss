@@ -1,0 +1,27 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+  background: #141b3f;
+  // overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+strong,
+em {
+  font-weight: 700;
+}
+.no-scroll,
+.slide-no-scroll {
+  overflow: hidden;
+}
+.hide-slide-nav {
+  opacity: 0;
+}
