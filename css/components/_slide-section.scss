@@ -83,6 +83,14 @@
 
   &__columns {
     height: 100vh;
+    // transition: .5s ease;
+    // transition-delay: 2s;
+
+    &.active::before {
+      transform: rotate(-5deg);
+      transition: .5s ease;
+      //transition-delay: s;
+    }
 
     &-footer {
       display: flex;
@@ -94,6 +102,7 @@
       }
     }
   }
+  
 
   &__row {
     display: flex;
@@ -113,12 +122,13 @@
     height: 100vh;
     background: #9c6e47;
     height: 100vh;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 285px;
-    padding-right: 100px;
     padding-top: 40px;
+    padding-left: 33%;
+    padding-right: 25%;
   }
 
   &__column-image {

@@ -107,7 +107,7 @@
   &-info {
     position: absolute;
     left: 50px;
-    bottom: 30px;
+    bottom: 40px;
     font-family: $fontSecondary;
     color: #fff;
   }
@@ -125,7 +125,10 @@
   }
 
   &-navigation {
-    margin-top: 55px;
+    position: absolute;
+    bottom: 55px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   &-navigation ul {
@@ -148,7 +151,7 @@
   }
 
   &-copyright {
-    bottom: 50px;
+    bottom: 70px;
     right: 50px;
     position: absolute;
 

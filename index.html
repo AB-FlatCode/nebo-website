@@ -10,7 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-
+  <link
+  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="./css/style.css" />
 </head>
 
@@ -23,7 +25,7 @@
   </div>
   <div class="loader__content">
     <div class="inner">
-      <!-- this will be animated on top of the dark background -->
+      this will be animated on top of the dark background -->
   <!-- <div class="loader__title">
         <div class="loader__title--mask"><span><img class="loader-logo" src="/images/logo.svg" alt=""></span></div>
       </div> -->
@@ -42,7 +44,7 @@
       </a>
 
     </div>
-    <div class="navigation__button" id="nav-toggle">
+    <div class="navigation__button " id="nav-toggle">
       <span class="top"></span>
       <span class="middle"></span>
       <span class="bottom"></span>
@@ -65,23 +67,50 @@
       </ul>
     </nav>
     <div class="navigation-overlay__button">
-      <a href="#" class="button-navigation">sign up for news</a>
+      <a href="#" class="button-navigation  modal-popup">sign up for news</a>
     </div>
+    <div class="modal-frame">
+      <div class="modal-body">
+        <div class="modal-inner">
+          <button id="modal-close" class="modal-body-close"><img src="images/close-icon.png" alt="" sizes="" srcset=""></button>
+          <h4 class="modal-title">Sign up</h4>
+          <div class="modal-text">Sign up to our Newsletter and be the first ones to find out about 
+            great upcoming events.</div>
+
+            <form class="modal-subscribe">
+              <input id="modal-form-input" type="email" placeholder="example@gmail.com" autocomplete="off" required="required"/>
+              <button type="submit"> <span>Subscribe</span></button>
+            </form>
+
+        </div>
+      </div>
+
+      <div class="modal-overlay"></div>
+    </div>
+    
+
   </div>
   <main class="main">
+    <!-- swiper container -->
     <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <div class="slide-section slide-section__plate">
             <div class="slide-section__content">
-              <div class="slide-section__number">
+              <div class="slide-section__number" data-swiper-animation="animate__fadeIn" 
+              data-duration=".8s">
                 <div>1</div>
 
               </div>
               <div class="slide-section__img">
-                <img src="images/plate1.png" alt="">
+                <img src="images/plate1.png" alt="" class="" data-swiper-animation="animate__fadeIn" 
+                data-duration=".8s"  
+                data-delay=".8s">
               </div>
-              <div class="slide-section__text">
+              <div class="slide-section__text" data-swiper-animation="animate__fadeIn" 
+              data-duration="3s" 
+              data-delay="1s"
+              >
                 Sit back and relax
               </div>
             </div>
@@ -94,13 +123,16 @@
         <div class="swiper-slide">
           <div class="slide-section slide-section__plate">
             <div class="slide-section__content">
-              <div class="slide-section__number">
+              <div class="slide-section__number" data-swiper-animation="animate__fadeIn" 
+              data-duration=".8s">
                 <div>2</div>
               </div>
               <div class="slide-section__img">
-                <img src="images/plate2.png" alt="">
+                <img src="images/plate2.png" alt="" class="">
               </div>
-              <div class="slide-section__text">
+              <div class="slide-section__text" data-swiper-animation="animate__fadeIn" 
+              data-duration="3s" 
+              data-delay="1s">
                 Let us take you to a creative
                 culinary journey
               </div>
@@ -115,13 +147,16 @@
         <div class="swiper-slide">
           <div class="slide-section slide-section__plate">
             <div class="slide-section__content">
-              <div class="slide-section__number">
+              <div class="slide-section__number" data-swiper-animation="animate__fadeIn" 
+              data-duration=".8s">
                 <div>3</div>
               </div>
               <div class="slide-section__img">
                 <img src="images/plate3.png" alt="">
               </div>
-              <div class="slide-section__text">
+              <div class="slide-section__text" data-swiper-animation="animate__fadeIn" 
+              data-duration="3s" 
+              data-delay="1s">
                 Let us take you to a creative culinary journey towards the discovery of
                 new heights
               </div>
@@ -136,13 +171,16 @@
         <div class="swiper-slide">
           <div class="slide-section slide-section__plate">
             <div class="slide-section__content">
-              <div class="slide-section__number">
+              <div class="slide-section__number" data-swiper-animation="animate__fadeIn" 
+              data-duration=".8s">
                 <div>4</div>
               </div>
               <div class="slide-section__img">
                 <img src="images/plate4.png" alt="">
               </div>
-              <div class="slide-section__text">
+              <div class="slide-section__text" data-swiper-animation="animate__fadeIn" 
+              data-duration="3s" 
+              data-delay="1s">
                 Let us take you to a creative culinary journey
                 towards the discovery of new heights in the Mediterranean and Croatian gastronomy.
               </div>
@@ -157,13 +195,16 @@
         <div class="swiper-slide">
           <div class="slide-section slide-section__plate">
             <div class="slide-section__content">
-              <div class="slide-section__number">
+              <div class="slide-section__number" data-swiper-animation="animate__fadeIn" 
+              data-duration=".8s">
                 <div>5</div>
               </div>
               <div class="slide-section__img">
                 <img src="images/plate5.png" alt="">
               </div>
-              <div class="slide-section__text">
+              <div class="slide-section__text" data-swiper-animation="animate__fadeIn" 
+              data-duration="3s" 
+              data-delay="1s">
                 Enjoy in this exceptional fine dining experience!
 
               </div>
@@ -351,14 +392,7 @@
                 <img src="images/Nebo Chef Name Logo 1.png" alt="Nebo Logo">
               </div>
               <a href="#" class="button-footer">Reserve nebo experience</a>
-              <nav class="footer-slide-navigation">
-                <ul>
-                  <li><a href="#">Dress Code / Policies</a></li>
-                  <li><a href="#">Terms & Conditions</a></li>
-                  <li><a href="#">Privacy Statement</a></li>
-                  <li><a href="#"> Cookies</a></li>
-                </ul>
-              </nav>
+            
             </div>
             <div class="footer-slide-info">
               <div class="footer-slide-widget">
@@ -367,7 +401,6 @@
                   17:00 - 02:00
                 </div>
               </div>
-
 
 
               <div class="footer-slide-widget">
@@ -394,6 +427,16 @@
             <div class="footer-slide-copyright">
               <a href="#">hiltonhotels.com</a>
             </div>
+
+            
+            <nav class="footer-slide-navigation">
+              <ul>
+                <li><a href="#">Dress Code / Policies</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Privacy Statement</a></li>
+                <li><a href="#"> Cookies</a></li>
+              </ul>
+            </nav>
           </div>
         </div>
 
@@ -404,7 +447,26 @@
         <div class="swiper-button-prev slide-section__prev"></div>
       </div>
     </div>
-
+    <!-- END swiper container -->
+    <section class="homepage-content"> 
+        <div class="home-section home-section__plate">
+          <div class="home-section__content">        
+            <div class="home-section__img">
+              <img src="images/plate1.png" alt="" class="">
+            </div>
+            <div class="home-section__desc">
+              <div class="home-section__text">
+                Sit back and relax
+              </div>   
+          </div>
+          <div class="home-section__cta">
+            <div class="button-mobile">
+              <a href="#">reserve now</a>
+            </div>
+          </div>
+          </div>   
+        </div>    
+    </section>
   </main>
 
   <!-- <footer class="footer">
@@ -461,6 +523,8 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
 <script type="module" defer src="/js/swiper.min.js"></script>
+<script type="module" defer src="/js/swiper-animation.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
 <script type="module" defer src="/js/index.js"></script>
 
 </html>

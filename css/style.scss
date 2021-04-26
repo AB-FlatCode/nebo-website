@@ -18,8 +18,11 @@
 @import './components/social-feed';
 @import './components/footer';
 @import './components/loader';
+@import './components/modal';
 
 // pages
 
+
+@import './pages/home';
 @import './pages/page';
 @import './pages/team';

@@ -11,6 +11,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
+  <link
+  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css" />
+
   <link rel="stylesheet" href="./css/style.css" />
 </head>
 
@@ -44,7 +47,25 @@
       </ul>
     </nav>
     <div class="navigation-overlay__button">
-      <a href="#" class="button-navigation">sign up for news</a>
+      <a href="#" class="button-navigation modal-popup">sign up for news</a>
+    </div>
+    <div class="modal-frame">
+      <div class="modal-body">
+        <div class="modal-inner">
+          <button id="modal-close" class="modal-body-close"><img src="images/close-icon.png" alt="" sizes="" srcset=""></button>
+          <h4 class="modal-title">Sign up</h4>
+          <div class="modal-text">Sign up to our Newsletter and be the first ones to find out about 
+            great upcoming events.</div>
+
+            <form class="modal-subscribe">
+              <input id="modal-form-input" type="email" placeholder="example@gmail.com" autocomplete="off" required="required"/>
+              <button type="submit"> <span>Subscribe</span></button>
+            </form>
+
+        </div>
+      </div>
+
+      <div class="modal-overlay"></div>
     </div>
   </div>
   <main class="main">
@@ -72,6 +93,7 @@
           </div>
           <div class="page__column">
             <div class="page__column-text page__column-text--sp page__column--blue">
+              <div data-simplebar data-simplebar-auto-hide="false" class="team-list__wrapp ">
               <ul class="team-list">
                 <li class="team-list__item">
                   <h3 class="team-list__name">Marin Vujić</h3>
@@ -109,7 +131,44 @@
                   </div>
                 </li>
 
+                <li class="team-list__item">
+                  <h3 class="team-list__name">Dario Maslarev</h3>
+                  <div class="team-list__position">Pastry Chef</div>
+                  <div class="team-list__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit,y nibh euismod
+                    tincidunt ut laoreet dolore magna aliquam erat
+                    volutpat.
+                  </div>
+                </li>
+
+                <li class="team-list__item">
+                  <h3 class="team-list__name">Dario Maslarev</h3>
+                  <div class="team-list__position">Pastry Chef</div>
+                  <div class="team-list__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit,y nibh euismod
+                    tincidunt ut laoreet dolore magna aliquam erat
+                    volutpat.
+                  </div>
+                </li>
+
+                <li class="team-list__item">
+                  <h3 class="team-list__name">Dario Maslarev</h3>
+                  <div class="team-list__position">Pastry Chef</div>
+                  <div class="team-list__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit,y nibh euismod
+                    tincidunt ut laoreet dolore magna aliquam erat
+                    volutpat.
+                  </div>
+                </li>
+
+                <li class="team-list__item">
+                  <h3 class="team-list__name">Dario Maslarev</h3>
+                  <div class="team-list__position">Pastry Chef</div>
+                  <div class="team-list__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit,y nibh euismod
+                    tincidunt ut laoreet dolore magna aliquam erat
+                    volutpat.
+                  </div>
+                </li>
+
               </ul>
+            </div>
             </div>
           </div>
 
@@ -169,6 +228,7 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.0.1/dist/gsap.min.js"></script>
 <script type="module" defer src="/js/swiper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
 <script type="module" defer src="/js/index.js"></script>
 
 </html>

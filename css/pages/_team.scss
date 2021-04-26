@@ -1,4 +1,11 @@
 .team {
+
+  &-list__wrapp {
+    height: 750px;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+
   &-list {
     display: inline-block;
     width: 385px;
@@ -31,4 +38,13 @@
     font-weight: 400;
     padding: 10px 0;
   }
+}
+
+
+.simplebar-scrollbar::before {
+  background-color: $colorGold;
+}
+.simplebar-track.simplebar-vertical {
+  top: 0;
+  width: 8px;
 }
