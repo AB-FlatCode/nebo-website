@@ -15,16 +15,29 @@
 
   &__nav {
     margin-right: 50px;
-
     right: 0;
     z-index: 20;
   }
 
   &__logo {
     margin-left: 50px;
+
+    @media (max-width: $mobile) {
+      margin-left: 25px;
+    }
+
+    & img {
+      @media (max-width: $mobile) {
+        width: 140px;
+      }
+    }
   }
 
   &.nav-active .header__logo {
     opacity: 0;
+  }
+
+  &.active-modal {
+    display: none;
   }
 }

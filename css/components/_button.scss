@@ -12,6 +12,7 @@
 
     @media (max-width: $laptop) {
       width: 100%;
+      position: relative;
     }
 
     & a {
@@ -26,10 +27,19 @@
       border-radius: 5px;
       padding: 15px 30px;
       position: relative;
+
+      @media (max-width: $laptop) {
+        padding: 10px 90px;
+        font-size: 16px;
+      }
     }
 
     &__clouds {
       margin-top: -39px;
+
+      @media (max-width: $laptop) {
+        width: 220px;
+      }
     }
   }
 
@@ -48,6 +58,13 @@
     letter-spacing: 0.08em;
     margin-top: 25px;
     text-transform: uppercase;
+
+    @media (max-width: $mobile) {
+      margin: 0 auto;
+      margin-top: 40px;
+      font-size: 14px;
+      padding: 10px 85px;
+    }
   }
 
   &-instagram {
@@ -59,6 +76,17 @@
     color: $colorGold;
     font-family: $fontSecondary;
     font-size: 24px;
+
+    & img {
+      width: 35px;
+    }
+
+    @media (max-width: $mobile) {
+      margin-bottom: 60px;
+      width: 215px;
+      font-size: 20px;
+    }
+
   }
 
   &-footer {
@@ -76,6 +104,10 @@
     position: absolute;
     bottom: 155px;
     letter-spacing: 0.05em;
+
+    @media (max-width: $mobile) {
+      font-size: 13px;
+    }
   }
 
   &-navigation {
@@ -93,6 +125,12 @@
     letter-spacing: 0.08em;
     margin-top: 25px;
     text-transform: uppercase;
+
+    @media (max-width: $mobile) {
+      font-size: 15px;
+      padding: 10px 50px;
+    }
+
   }
 
   &-mobile {

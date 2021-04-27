@@ -5,6 +5,12 @@
   max-width: 915px;
   justify-content: flex-end;
 
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    max-width: auto;
+    flex-wrap: nowrap;
+  }
+
   &__col {
     padding: 10px;
   }

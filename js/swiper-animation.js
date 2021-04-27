@@ -1,8 +1,9 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-  typeof define === 'function' && define.amd ? define(factory) :
-  (global = global || self, global.SwiperAnimation = factory());
-}(this, (function () { 'use strict';
+    typeof define === 'function' && define.amd ? define(factory) :
+    (global = global || self, global.SwiperAnimation = factory());
+}(this, (function () {
+  'use strict';
 
   function _classCallCheck(instance, Constructor) {
     if (!(instance instanceof Constructor)) {
@@ -89,91 +90,93 @@
     appendedPromisePolyfill = true;
   };
 
-  function unwrapExports (x) {
-  	return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
+  function unwrapExports(x) {
+    return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
   }
 
   function createCommonjsModule(fn, module) {
-  	return module = { exports: {} }, fn(module, module.exports), module.exports;
+    return module = {
+      exports: {}
+    }, fn(module, module.exports), module.exports;
   }
 
   var isNodeList = createCommonjsModule(function (module, exports) {
 
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports["default"] = void 0;
-  /**
-   * determine nodeList type
-   * @param nodeList
-   */
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports["default"] = void 0;
+    /**
+     * determine nodeList type
+     * @param nodeList
+     */
 
-  var _default = function _default(nodeList) {
-    return Object.prototype.toString.call(nodeList) === '[object NodeList]';
-  };
+    var _default = function _default(nodeList) {
+      return Object.prototype.toString.call(nodeList) === '[object NodeList]';
+    };
 
-  exports["default"] = _default;
+    exports["default"] = _default;
   });
 
   unwrapExports(isNodeList);
 
   var isArray = createCommonjsModule(function (module, exports) {
 
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports["default"] = void 0;
-  /**
-   * determine an array type
-   * @param arr
-   * @returns {boolean}
-   */
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports["default"] = void 0;
+    /**
+     * determine an array type
+     * @param arr
+     * @returns {boolean}
+     */
 
-  var _default = function _default(arr) {
-    return Object.prototype.toString.call(arr).slice(8, -1) === 'Array';
-  };
+    var _default = function _default(arr) {
+      return Object.prototype.toString.call(arr).slice(8, -1) === 'Array';
+    };
 
-  exports["default"] = _default;
+    exports["default"] = _default;
   });
 
   unwrapExports(isArray);
 
   var nodeListToArray = createCommonjsModule(function (module, exports) {
 
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports["default"] = void 0;
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports["default"] = void 0;
 
-  var _isNodeList = _interopRequireDefault(isNodeList);
+    var _isNodeList = _interopRequireDefault(isNodeList);
 
-  var _isArray = _interopRequireDefault(isArray);
+    var _isArray = _interopRequireDefault(isArray);
 
-  function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : {
-      "default": obj
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : {
+        "default": obj
+      };
+    }
+    /**
+     * nodeList into array
+     * @param nodeList
+     * @returns {Array}
+     */
+
+
+    var _default = function _default(nodeList) {
+      if ((0, _isArray["default"])(nodeList)) {
+        return nodeList;
+      }
+
+      if (!(0, _isNodeList["default"])(nodeList)) {
+        return new Array(nodeList);
+      }
+
+      return Array.from ? Array.from(nodeList) : Array.prototype.slice.call(nodeList);
     };
-  }
-  /**
-   * nodeList into array
-   * @param nodeList
-   * @returns {Array}
-   */
 
-
-  var _default = function _default(nodeList) {
-    if ((0, _isArray["default"])(nodeList)) {
-      return nodeList;
-    }
-
-    if (!(0, _isNodeList["default"])(nodeList)) {
-      return new Array(nodeList);
-    }
-
-    return Array.from ? Array.from(nodeList) : Array.prototype.slice.call(nodeList);
-  };
-
-  exports["default"] = _default;
+    exports["default"] = _default;
   });
 
   var nodeListToArray$1 = unwrapExports(nodeListToArray);
@@ -202,62 +205,62 @@
 
   var isPromise = createCommonjsModule(function (module, exports) {
 
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports["default"] = void 0;
-  /**
-   * determine a promise type
-   * @param promise
-   * @returns {boolean}
-   */
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports["default"] = void 0;
+    /**
+     * determine a promise type
+     * @param promise
+     * @returns {boolean}
+     */
 
-  var _default = function _default(promise) {
-    return Object.prototype.toString.call(promise).slice(8, -1) === 'Promise';
-  };
+    var _default = function _default(promise) {
+      return Object.prototype.toString.call(promise).slice(8, -1) === 'Promise';
+    };
 
-  exports["default"] = _default;
+    exports["default"] = _default;
   });
 
   unwrapExports(isPromise);
 
   var functionToPromise = createCommonjsModule(function (module, exports) {
 
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports["default"] = void 0;
-
-  var _isPromise = _interopRequireDefault(isPromise);
-
-  function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : {
-      "default": obj
-    };
-  }
-  /**
-   * function to promise
-   * @param normalFunction
-   * @param timeout
-   * @returns {Promise<any>}
-   */
-
-
-  var _default = function _default(normalFunction) {
-    var timeout = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-
-    if ((0, _isPromise["default"])(normalFunction)) {
-      return normalFunction;
-    } // eslint-disable-next-line no-undef
-
-
-    return new Promise(function (resolve) {
-      normalFunction();
-      setTimeout(resolve, timeout);
+    Object.defineProperty(exports, "__esModule", {
+      value: true
     });
-  };
+    exports["default"] = void 0;
 
-  exports["default"] = _default;
+    var _isPromise = _interopRequireDefault(isPromise);
+
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : {
+        "default": obj
+      };
+    }
+    /**
+     * function to promise
+     * @param normalFunction
+     * @param timeout
+     * @returns {Promise<any>}
+     */
+
+
+    var _default = function _default(normalFunction) {
+      var timeout = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+
+      if ((0, _isPromise["default"])(normalFunction)) {
+        return normalFunction;
+      } // eslint-disable-next-line no-undef
+
+
+      return new Promise(function (resolve) {
+        normalFunction();
+        setTimeout(resolve, timeout);
+      });
+    };
+
+    exports["default"] = _default;
   });
 
   var functionToPromise$1 = unwrapExports(functionToPromise);
@@ -375,7 +378,7 @@
     throw new Error('Illegal swiper instance');
   };
 
-  var _default = /*#__PURE__*/function () {
+  var _default = /*#__PURE__*/ function () {
     function _default(swiper) {
       _classCallCheck(this, _default);
 
@@ -421,7 +424,7 @@
     return _default;
   }();
 
-  var _default$1 = /*#__PURE__*/function () {
+  var _default$1 = /*#__PURE__*/ function () {
     function _default$1() {
       _classCallCheck(this, _default$1);
 

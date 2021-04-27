@@ -11,9 +11,11 @@
     width: 385px;
     margin-top: 85px;
   }
+
   &-list__item {
     padding: 15px 0;
   }
+
   &-list__name {
     font-family: $fontPrimary;
     font-size: 18px;
@@ -22,6 +24,7 @@
     margin: 0;
     padding: 5px 0;
   }
+
   &-list__position {
     font-family: $fontPrimary;
     font-size: 18px;
@@ -30,6 +33,7 @@
     margin: 0;
     font-style: italic;
   }
+
   &-list__text {
     font-family: $fontSecondary;
     font-size: 16px;
@@ -44,6 +48,7 @@
 .simplebar-scrollbar::before {
   background-color: $colorGold;
 }
+
 .simplebar-track.simplebar-vertical {
   top: 0;
   width: 8px;

@@ -9,6 +9,7 @@
   width: 100%;
   overflow: hidden;
 }
+
 .loader__mask {
   position: absolute;
   display: flex;
@@ -21,14 +22,17 @@
   overflow: hidden;
   background: $colorBlue;
 }
+
 .loader .inner,
 .loader__content .inner {
   width: 27.36vw;
   height: 50vh;
 }
+
 .loader .inner {
   background-color: $colorBlue;
 }
+
 .loader__content {
   z-index: 5;
   display: flex;
@@ -37,6 +41,7 @@
   background: transparent;
   //visibility: hidden;
 }
+
 .loader__title {
   color: #fff;
   font-weight: normal;
@@ -47,12 +52,14 @@
   transform: translate(-50%, -50%);
   z-index: 5;
 }
+
 .loader__image {
   width: 27.36vw;
   padding-bottom: 50vh;
   overflow: hidden;
   position: relative;
 }
+
 .loader__image img {
   top: 0;
   left: 0;
@@ -63,18 +70,22 @@
   object-position: 50% 50%;
   opacity: 0.8;
 }
+
 .loader__title--mask {
   overflow: hidden;
 }
+
 .loader__title--mask span {
   display: block;
 }
+
 .loader__image--mask {
   overflow: hidden;
   width: 100%;
   height: 100%;
   position: absolute;
 }
+
 .loader-logo {
   width: 700px;
 }

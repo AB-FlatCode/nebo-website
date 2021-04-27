@@ -7,6 +7,11 @@
   z-index: 100;
   transition: opacity 0.25s ease;
   position: relative;
+  display: inline-block;
+
+  @media (max-width: $mobile) {
+    margin-right: 25px;
+  }
 
   &:hover {
     opacity: 0.7;
@@ -17,6 +22,7 @@
       transform: translateY(11px) translateX(0) rotate(45deg);
       background: #fff;
     }
+
     .middle {
       opacity: 0;
       background: #fff;
@@ -68,8 +74,13 @@
 
   &-logo {
     padding-bottom: 15px;
+
     img {
       width: 295px;
+
+      @media (max-width: $mobile) {
+        width: 200px;
+      }
     }
   }
 
@@ -82,11 +93,14 @@
 .navigation__overlay-menu {
   position: relative;
   font-size: 48px;
-
   font-family: $fontPrimary;
   font-weight: 400;
   text-align: center;
   z-index: 100;
+
+  @media (max-width: $mobile) {
+    font-size: 25px;
+  }
 
   ul {
     position: relative;
@@ -134,9 +148,11 @@
   &:nth-of-type(2) {
     animation-delay: 0.4s;
   }
+
   &:nth-of-type(3) {
     animation-delay: 0.45s;
   }
+
   &:nth-of-type(4) {
     animation-delay: 0.5s;
   }

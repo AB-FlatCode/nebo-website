@@ -2,6 +2,10 @@
   &__columns {
     height: 100vh;
 
+    @media (max-width: $mobile) {
+      height: auto;
+    }
+
     &-footer {
       display: flex;
       align-items: center;
@@ -14,6 +18,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
   }
 
   &__column {
@@ -22,6 +30,7 @@
     flex-basis: 100%;
     flex: 1;
   }
+
   &__column-text {
     height: 100vh;
     display: flex;
@@ -70,11 +79,13 @@
 
   &-meta {
     position: relative;
+
     &__title {
       position: absolute;
       top: 25px;
       left: -60px;
     }
+
     &__caption {
       position: absolute;
       color: #fff;
@@ -82,6 +93,7 @@
       bottom: 20px;
       left: -60px;
     }
+
     &__caption--right {
       right: -105px;
       color: #fff;
@@ -94,6 +106,7 @@
       position: absolute;
       bottom: -100px;
       right: -55px;
+
       & img {
         height: 155px;
       }

@@ -18,10 +18,16 @@ strong,
 em {
   font-weight: 700;
 }
+
 .no-scroll,
 .slide-no-scroll {
   overflow: hidden;
 }
+
 .hide-slide-nav {
   opacity: 0;
+}
+
+.pb-40 {
+  padding-bottom: 40px;
 }

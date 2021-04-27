@@ -6,6 +6,11 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  display: none;
+
+  @media (max-width: $mobile) {
+    display: block;
+  }
 
   &-info {
     position: absolute;
@@ -13,6 +18,15 @@
     bottom: 30px;
     font-family: $fontSecondary;
     color: #fff;
+
+    @media (max-width: $mobile) {
+      position: relative;
+      text-align: center;
+      margin-top: 40px;
+      left: 0px;
+      bottom: 0px;
+    }
+
   }
 
   &-center {
@@ -21,18 +35,43 @@
     justify-content: center;
     align-items: center;
     position: relative;
+
+    @media (max-width: $mobile) {
+      padding-top: 40px;
+    }
+  }
+
+  &-logo {
+    @media (max-width: $mobile) {
+      padding: 30px;
+    }
   }
 
   &-logo img {
     width: 765px;
+
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
   }
 
   &-navigation {
     margin-top: 55px;
+
+    @media (max-width: $mobile) {
+      margin-top: 0px;
+    }
   }
 
   &-navigation ul {
     display: flex;
+    margin-top: 55px;
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+    }
 
     & li {
       display: inline-block;
@@ -41,6 +80,10 @@
       font-size: 16px;
       line-height: 28px;
       font-weight: 400;
+
+      @media (max-width: $mobile) {
+        font-size: 14px;
+      }
     }
 
     & li a {
@@ -55,11 +98,24 @@
     right: 50px;
     position: absolute;
 
+    @media (max-width: $mobile) {
+      position: relative;
+      text-align: center;
+      padding-top: 30px;
+      padding-bottom: 60px;
+      bottom: 0px;
+      right: 0px;
+    }
+
     & a {
       color: #fff;
       font-family: $fontSecondary;
       font-size: 18px;
       line-height: 32px;
+
+      @media (max-width: $mobile) {
+        font-size: 14px;
+      }
     }
   }
 
@@ -76,6 +132,11 @@
       font-size: 18px;
       line-height: 28px;
       padding: 10px 0;
+
+      @media (max-width: $mobile) {
+        font-size: 14px;
+      }
+
       & span {
         display: block;
       }
@@ -86,11 +147,31 @@
     position: absolute;
     right: 50px;
 
+    @media (max-width: $mobile) {
+      position: relative;
+      right: 0px;
+    }
+
     & ul {
       display: flex;
       flex-direction: column;
       height: 130px;
       justify-content: space-between;
+
+
+      @media (max-width: $mobile) {
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
+        height: auto;
+        justify-content: center;
+      }
+    }
+
+    & ul li {
+      @media (max-width: $mobile) {
+        padding: 0 12px;
+      }
     }
   }
 }
@@ -141,6 +222,7 @@
       font-size: 16px;
       line-height: 28px;
       font-weight: 400;
+
     }
 
     & li a {
@@ -176,6 +258,7 @@
       font-size: 18px;
       line-height: 28px;
       padding: 10px 0;
+
       & span {
         display: block;
       }

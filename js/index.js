@@ -26,30 +26,32 @@ navButton.addEventListener('click', function () {
   const $modalPopup = document.querySelector('.modal-popup');
   const $modalOverlay = document.querySelector('.modal-overlay');
   const $close = document.getElementById('modal-close');
-  
-  
-  
+
+
+
   function closeModal() {
-      $modal.classList.remove('active');
-      $modal.classList.add('leave');
+    $modal.classList.remove('active');
+    $modal.classList.add('leave');
   }
-  
+
   $modalPopup.addEventListener('click', (e) => {
     $modal.classList.toggle('active');
+    siteHeader.classList.toggle('active-modal');
     $modal.classList.remove('leave');
-    
+
   })
-  
+
   $modalOverlay.addEventListener('click', (e) => {
     closeModal();
   })
-  
+
   $close.addEventListener('click', (e) => {
-      closeModal();
+    siteHeader.classList.toggle('active-modal');
+    closeModal();
   })
-  
-          
-  })();
+
+
+})();
 
 /*Home slider*/
 const swiperAnimation = new SwiperAnimation();
@@ -79,7 +81,7 @@ const swiper = new Swiper('.swiper-container', {
       swiperAnimation.init(this).animate();
     }
   },
- 
+
   navigation: {
     nextEl: '.slide-section__next',
     prevEl: '.slide-section__prev',
@@ -99,7 +101,7 @@ swiper.on('transitionStart', function () {
     slideNav.classList.remove('hide-slide-nav');
   }
 
-  if (swiper.realIndex == 5 || swiper.realIndex == 6 || swiper.realIndex == 7 ) {
+  if (swiper.realIndex == 5 || swiper.realIndex == 6 || swiper.realIndex == 7) {
     slideColumns.classList.toggle('active');
   }
 });
@@ -141,6 +143,3 @@ function init() {
 window.addEventListener('load', function () {
   init();
 });*/
-
-
-
