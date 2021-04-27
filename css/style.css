@@ -365,6 +365,9 @@ em {
 .pb-40 {
   padding-bottom: 40px; }
 
+.pt-160 {
+  padding-top: 160px; }
+
 /**
  * Swiper 6.5.7
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -915,6 +918,10 @@ body {
   padding: 0;
   margin: 0;
   margin-bottom: 25px; }
+  @media (max-width: 480px) {
+    .slide-section__heading,
+    .page-meta__title h2 {
+      font-size: 44px; } }
   .slide-section__heading span,
   .page-meta__title h2 span {
     font-size: 40px; }
@@ -925,6 +932,11 @@ body {
   line-height: 33px;
   font-weight: 400;
   font-style: italic; }
+  @media (max-width: 480px) {
+    .page-meta__caption,
+    .page-meta__caption--right {
+      font-size: 16px;
+      line-height: 23px; } }
 
 .slide-section__desc {
   font-family: "Playfair Display", serif;
@@ -942,6 +954,14 @@ body {
   .page__desc.page__desc--sf {
     font-size: 22px;
     font-weight: 300; }
+    @media (max-width: 480px) {
+      .page__desc.page__desc--sf {
+        font-size: 16px;
+        line-height: 30px; } }
+  @media (max-width: 480px) {
+    .page__desc {
+      font-size: 16px;
+      line-height: 30px; } }
 
 .page__heading {
   font-size: 38px;
@@ -1172,6 +1192,7 @@ body {
     .button-slide {
       margin: 0 auto;
       margin-top: 40px;
+      margin-bottom: 40px;
       font-size: 14px;
       padding: 10px 85px; } }
 
@@ -2094,12 +2115,27 @@ body {
   padding: 0 205px; }
   .page__column-text.page__column-text--mp {
     padding: 0 25%; }
+    @media (max-width: 480px) {
+      .page__column-text.page__column-text--mp {
+        padding: 90px 30px 40px 30px;
+        height: auto; } }
   .page__column-text.page__column-text--sp {
     padding: 0 15%; }
+    @media (max-width: 480px) {
+      .page__column-text.page__column-text--sp {
+        padding: 90px 30px 40px 30px;
+        height: auto; } }
+  @media (max-width: 480px) {
+    .page__column-text.page__column-text--about {
+      padding-top: 160px; } }
   .page__column-text.page__column--gold {
     background: #9C6E47; }
   .page__column-text.page__column--blue {
     background: #141B3F; }
+  @media (max-width: 480px) {
+    .page__column-text {
+      padding: 90px 30px 40px 30px;
+      height: auto; } }
 
 .page__column-image {
   position: relative;
@@ -2111,10 +2147,17 @@ body {
   .page__column-image img {
     margin-top: 70px;
     height: 620px; }
+    @media (max-width: 480px) {
+      .page__column-image img {
+        width: 322px;
+        height: auto; } }
   .page__column-image.page__column--gold {
     background: #9C6E47; }
   .page__column-image.page__column--blue {
     background: #141B3F; }
+  @media (max-width: 480px) {
+    .page__column-image {
+      height: 58vh; } }
 
 .page-meta {
   position: relative; }
@@ -2122,34 +2165,65 @@ body {
     position: absolute;
     top: 25px;
     left: -60px; }
+    @media (max-width: 480px) {
+      .page-meta__title {
+        left: -10px; } }
   .page-meta__caption {
     position: absolute;
     color: #fff;
     width: 350px;
     bottom: 20px;
     left: -60px; }
+    @media (max-width: 480px) {
+      .page-meta__caption {
+        width: 250px;
+        bottom: -85px;
+        left: 30px; } }
   .page-meta__caption--right {
     right: -105px;
     color: #fff;
     width: 350px;
     bottom: -90px;
     position: absolute; }
+    @media (max-width: 480px) {
+      .page-meta__caption--right {
+        right: 106px;
+        color: #fff;
+        width: 230px;
+        bottom: 35px;
+        position: absolute; } }
   .page-meta__paraf {
     position: absolute;
     bottom: -100px;
     right: -55px; }
+    @media (max-width: 480px) {
+      .page-meta__paraf {
+        display: none; } }
     .page-meta__paraf img {
       height: 155px; }
+  @media (max-width: 480px) {
+    .page-meta {
+      position: absolute;
+      bottom: -70px; } }
 
 .team-list__wrapp {
   height: 750px;
   overflow: hidden;
   overflow-y: auto; }
+  @media (max-width: 480px) {
+    .team-list__wrapp {
+      height: auto;
+      overflow: auto;
+      overflow-y: auto; } }
 
 .team-list {
   display: inline-block;
   width: 385px;
   margin-top: 85px; }
+  @media (max-width: 480px) {
+    .team-list {
+      width: auto;
+      margin-top: 0; } }
 
 .team-list__item {
   padding: 15px 0; }

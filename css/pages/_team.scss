@@ -4,12 +4,23 @@
     height: 750px;
     overflow: hidden;
     overflow-y: auto;
+
+    @media (max-width: $mobile) {
+      height: auto;
+      overflow: auto;
+      overflow-y: auto;
+    }
   }
 
   &-list {
     display: inline-block;
     width: 385px;
     margin-top: 85px;
+
+    @media (max-width: $mobile) {
+      width: auto;
+      margin-top: 0;
+    }
   }
 
   &-list__item {

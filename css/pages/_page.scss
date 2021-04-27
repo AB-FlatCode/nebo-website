@@ -40,10 +40,27 @@
 
     &.page__column-text--mp {
       padding: 0 25%;
+
+      @media (max-width: $mobile) {
+        padding: 90px 30px 40px 30px;
+        height: auto;
+      }
     }
 
     &.page__column-text--sp {
       padding: 0 15%;
+
+      @media (max-width: $mobile) {
+        padding: 90px 30px 40px 30px;
+        height: auto;
+      }
+    }
+
+    &.page__column-text--about {
+
+      @media (max-width: $mobile) {
+        padding-top: 160px;
+      }
     }
 
     &.page__column--gold {
@@ -52,6 +69,11 @@
 
     &.page__column--blue {
       background: $colorBlue;
+    }
+
+    @media (max-width: $mobile) {
+      padding: 90px 30px 40px 30px;
+      height: auto;
     }
   }
 
@@ -66,6 +88,11 @@
     & img {
       margin-top: 70px;
       height: 620px;
+
+      @media (max-width: $mobile) {
+        width: 322px;
+        height: auto;
+      }
     }
 
     &.page__column--gold {
@@ -74,6 +101,10 @@
 
     &.page__column--blue {
       background: $colorBlue;
+    }
+
+    @media (max-width: $mobile) {
+      height: 58vh;
     }
   }
 
@@ -84,6 +115,10 @@
       position: absolute;
       top: 25px;
       left: -60px;
+
+      @media (max-width: $mobile) {
+        left: -10px;
+      }
     }
 
     &__caption {
@@ -92,6 +127,13 @@
       width: 350px;
       bottom: 20px;
       left: -60px;
+
+      @media (max-width: $mobile) {
+        width: 250px;
+        bottom: -85px;
+        left: 30px;
+      }
+
     }
 
     &__caption--right {
@@ -100,6 +142,14 @@
       width: 350px;
       bottom: -90px;
       position: absolute;
+
+      @media (max-width: $mobile) {
+        right: 106px;
+        color: #fff;
+        width: 230px;
+        bottom: 35px;
+        position: absolute;
+      }
     }
 
     &__paraf {
@@ -107,9 +157,18 @@
       bottom: -100px;
       right: -55px;
 
+      @media (max-width: $mobile) {
+        display: none;
+      }
+
       & img {
         height: 155px;
       }
+    }
+
+    @media (max-width: $mobile) {
+      position: absolute;
+      bottom: -70px;
     }
   }
 }

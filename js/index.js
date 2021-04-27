@@ -1,4 +1,5 @@
 const bodyEl = document.querySelector('.body');
+const homeSlide = document.querySelector('.home-slide');
 const navButton = document.querySelector('#nav-toggle');
 const navOverlay = document.querySelector('#nav-overlay');
 const siteHeader = document.querySelector('.header');
@@ -9,6 +10,8 @@ const loaderInner = document.querySelector('.loader .inner');
 const loader = document.querySelector('.loader');
 const loaderContent = document.querySelector('.loader__content');
 const loaderLogo = document.querySelector('.loader-logo');
+
+
 
 /*Navigation*/
 
@@ -26,8 +29,6 @@ navButton.addEventListener('click', function () {
   const $modalPopup = document.querySelector('.modal-popup');
   const $modalOverlay = document.querySelector('.modal-overlay');
   const $close = document.getElementById('modal-close');
-
-
 
   function closeModal() {
     $modal.classList.remove('active');
@@ -54,57 +55,71 @@ navButton.addEventListener('click', function () {
 })();
 
 /*Home slider*/
-const swiperAnimation = new SwiperAnimation();
-const swiper = new Swiper('.swiper-container', {
-  direction: 'vertical',
-  slidesPerView: 1,
+if (homeSlide) {
+  const swiperAnimation = new SwiperAnimation();
+  const swiper = new Swiper('.swiper-container', {
+    direction: 'vertical',
+    slidesPerView: 1,
 
-  mousewheel: {
-    invert: false,
-    forceToAxis: true,
-    releaseOnEdges: true,
-  },
-
-  keyboard: {
-    enabled: true,
-    onlyInViewport: true,
-    freeMode: true,
-    freeModeSticky: true,
-  },
-
-  effect: 'fade',
-  on: {
-    init: function () {
-      swiperAnimation.init(this).animate();
+    mousewheel: {
+      invert: false,
+      forceToAxis: true,
+      releaseOnEdges: true,
     },
-    slideChange: function () {
-      swiperAnimation.init(this).animate();
+
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+      freeMode: true,
+      freeModeSticky: true,
+    },
+
+    effect: 'fade',
+    on: {
+      init: function () {
+        swiperAnimation.init(this).animate();
+      },
+      slideChange: function () {
+        swiperAnimation.init(this).animate();
+      }
+    },
+
+    navigation: {
+      nextEl: '.slide-section__next',
+      prevEl: '.slide-section__prev',
+    },
+  });
+
+  /*Hide slide navigation on last*/
+
+  swiper.on('transitionStart', function () {
+    //console.log('*** mySwiper.realIndex', swiper.realIndex);
+
+    if (swiper.realIndex == 9) {
+      slideNav.classList.add('hide-slide-nav');
     }
-  },
 
-  navigation: {
-    nextEl: '.slide-section__next',
-    prevEl: '.slide-section__prev',
-  },
-});
+    if (swiper.realIndex == 8) {
+      slideNav.classList.remove('hide-slide-nav');
+    }
 
-/*Hide slide navigation on last*/
+    if (swiper.realIndex == 5 || swiper.realIndex == 6 || swiper.realIndex == 7) {
+      slideColumns.classList.toggle('active');
+    }
+  });
 
-swiper.on('transitionStart', function () {
-  //console.log('*** mySwiper.realIndex', swiper.realIndex);
+}
 
-  if (swiper.realIndex == 9) {
-    slideNav.classList.add('hide-slide-nav');
-  }
+/** Enable custom scrollbar only on mobile (team-page) */
 
-  if (swiper.realIndex == 8) {
-    slideNav.classList.remove('hide-slide-nav');
-  }
+if (window.matchMedia('screen and (min-width: 900px)').matches) {
+  console.log('desktop');
+  const simpleBar = new SimpleBar(document.querySelector('.team-list__wrapp'), {
+    autoHide: false
+  });
+}
 
-  if (swiper.realIndex == 5 || swiper.realIndex == 6 || swiper.realIndex == 7) {
-    slideColumns.classList.toggle('active');
-  }
-});
+
 
 /*Home Loader
 function initLoader() {
