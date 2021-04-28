@@ -8,8 +8,10 @@
   position: relative;
   display: none;
 
+
   @media (max-width: $mobile) {
     display: block;
+    scroll-snap-align: start;
   }
 
   &-info {

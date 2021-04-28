@@ -22,6 +22,16 @@ navButton.addEventListener('click', function () {
   bodyEl.classList.toggle('no-scroll');
 });
 
+/** Header classes */
+
+if (document.querySelector('body.page') && (window.matchMedia('screen and (max-width: 900px)').matches)) {
+  siteHeader.classList.add('page-header');
+} else {
+  siteHeader.classList.remove('page-header');
+}
+
+
+
 /*Newsletter modal*/
 
 (() => {
@@ -33,6 +43,7 @@ navButton.addEventListener('click', function () {
   function closeModal() {
     $modal.classList.remove('active');
     $modal.classList.add('leave');
+    siteHeader.classList.toggle('active-modal');
   }
 
   $modalPopup.addEventListener('click', (e) => {
@@ -47,7 +58,6 @@ navButton.addEventListener('click', function () {
   })
 
   $close.addEventListener('click', (e) => {
-    siteHeader.classList.toggle('active-modal');
     closeModal();
   })
 
@@ -118,43 +128,3 @@ if (window.matchMedia('screen and (min-width: 900px)').matches) {
     autoHide: false
   });
 }
-
-
-
-/*Home Loader
-function initLoader() {
-  const tlLoaderIn = gsap.timeline({
-    defaults: {
-      duration: 1.1,
-      ease: 'power2.out',
-    },
-    onComplete: () => bodyEl.classList.remove('is-loading'),
-  });
-
-  tlLoaderIn.from(
-    loaderLogo,
-    {
-      opacity: 1,
-    },
-    1.2
-  );
-  //.from(loaderTextMask, { y: '-100%', stagger: 0.1 });
-
-  const tlLoaderOut = gsap.timeline({
-    defaults: {
-      duration: 1.2,
-      ease: 'power2.out',
-    },
-  });
-
-  //tlLoaderOut.to(loaderTitleMask, { y: '-100%' }).to([loader, loaderContent], { y: '-100%', stagger: 0.2 });
-  tlLoaderOut.to([loader, loaderContent], { y: '-100%' }).from('.main', { y: 150 });
-}
-
-function init() {
-  initLoader();
-}
-
-window.addEventListener('load', function () {
-  init();
-});*/

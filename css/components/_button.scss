@@ -29,8 +29,8 @@
       position: relative;
 
       @media (max-width: $laptop) {
-        padding: 10px 90px;
-        font-size: 16px;
+        padding: 8px 90px;
+        font-size: 14px;
       }
     }
 
@@ -38,7 +38,7 @@
       margin-top: -39px;
 
       @media (max-width: $laptop) {
-        width: 220px;
+        width: 205px;
       }
     }
   }

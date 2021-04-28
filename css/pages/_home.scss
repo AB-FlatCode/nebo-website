@@ -6,8 +6,18 @@
 
 // Mobile styles
 @media (max-width: $mobile) {
+
+  html {
+    /* body won't work ¯\_(ツ)_/¯ */
+    scroll-snap-type: y mandatory;
+  }
+
   .swiper-container {
     display: none;
+  }
+
+  .homepage-content {
+    scroll-snap-type: y mandatory;
   }
 
   .home-section {
@@ -15,6 +25,20 @@
     position: relative;
     height: 100vh;
     display: flex;
+    scroll-snap-align: start;
+
+    &::before {
+      content: "";
+      height: 505px;
+      width: 210px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url(/images/section-dots-left.png);
+      background-repeat: no-repeat;
+      opacity: 0.25;
+      background-size: contain;
+    }
 
     &__plate {
       background-image: url(/images/slide-bg.jpg);
@@ -45,8 +69,8 @@
       font-size: 18px;
       line-height: 28px;
       color: #fff;
-      margin-top: 110px;
-      margin-bottom: 110px;
+      margin-top: 95px;
+      margin-bottom: 105px;
       position: relative;
       width: 320px;
       text-align: center;
@@ -91,7 +115,7 @@
 
       & img {
         width: 100%;
-        max-width: 280px;
+        max-width: 265px;
       }
     }
 
@@ -116,6 +140,7 @@
       background-color: $colorBrown;
       position: relative;
       padding: 0 25px;
+      scroll-snap-align: start;
     }
 
     &__column-image {
