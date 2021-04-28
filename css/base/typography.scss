@@ -74,6 +74,11 @@ body {
   color: #fff;
   font-weight: 400;
   text-transform: uppercase;
+
+  @media (max-width: $mobile) {
+    font-size: 26px;
+    line-height: 36px;
+  }
 }
 
 .color-l-gray {

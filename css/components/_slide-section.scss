@@ -16,15 +16,17 @@
 
   &::before {
     content: '';
-    height: 1200px;
-    width: 1200px;
+    height: 1400px;
+    width: 1400px;
     position: absolute;
-    top: -115px;
-    left: 0;
-    background-image: url(/images/section-dots-left.png);
+    top: -205px;
+    left: -42%;
+    background-image: url(/images/dots-circle-1400.png);
     background-repeat: no-repeat;
     opacity: 0.25;
+    background-size: contain;
   }
+
 
   &__plate {
     background-image: url(/images/slide-bg.jpg);
@@ -208,4 +210,18 @@
   &__prev.swiper-button-disabled {
     opacity: 0;
   }
+
+  &__circle {
+    position: absolute;
+    z-index: 200;
+    left: -40%;
+  }
+}
+
+.swiper-slide-active .slide-section__columns::before,
+.swiper-slide-active .slide-section::before {
+  transform: rotate(11deg);
+  transition: 2.5s ease;
+  transform-origin: center;
+  //transition-delay: s;
 }

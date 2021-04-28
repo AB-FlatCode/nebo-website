@@ -12,7 +12,6 @@ const loaderContent = document.querySelector('.loader__content');
 const loaderLogo = document.querySelector('.loader-logo');
 
 
-
 /*Navigation*/
 
 navButton.addEventListener('click', function () {
@@ -29,8 +28,6 @@ if (document.querySelector('body.page') && (window.matchMedia('screen and (max-w
 } else {
   siteHeader.classList.remove('page-header');
 }
-
-
 
 /*Newsletter modal*/
 
@@ -113,18 +110,48 @@ if (homeSlide) {
       slideNav.classList.remove('hide-slide-nav');
     }
 
-    if (swiper.realIndex == 5 || swiper.realIndex == 6 || swiper.realIndex == 7) {
-      slideColumns.classList.toggle('active');
-    }
+
   });
 
-}
 
+  swiper.on('slideChangeTransitionEnd	', function () {
+    //console.log('*** mySwiper.realIndex', swiper.realIndex);
+    slideColumns.classList.add('dots-reverse');
+  });
+}
 /** Enable custom scrollbar only on mobile (team-page) */
 
-if (window.matchMedia('screen and (min-width: 900px)').matches) {
+if (document.querySelector('.page-team') && window.matchMedia('screen and (min-width: 900px)').matches) {
   console.log('desktop');
   const simpleBar = new SimpleBar(document.querySelector('.team-list__wrapp'), {
     autoHide: false
   });
 }
+
+
+// /** Circle rotate on scroll */
+// let dotsCircle = document.querySelector('.slide-section__circle');;
+// (function () {
+//   var throttle = function (type, name, obj) {
+//     var obj = obj || window;
+//     var running = false;
+//     var func = function () {
+//       if (running) {
+//         return;
+//       }
+//       running = true;
+//       requestAnimationFrame(function () {
+//         obj.dispatchEvent(new CustomEvent(name));
+//         running = false;
+//       });
+//     };
+//     obj.addEventListener(type, func);
+//   };
+//   throttle("scroll", "optimizedScroll");
+// })();
+
+// window.addEventListener("optimizedScroll", function () {
+//   dotsCircle.style.transform = "rotate(" + window.pageYOffset + "deg)";
+// });
+
+// Wrap every letter in a span

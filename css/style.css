@@ -369,6 +369,10 @@ em {
 .pt-160 {
   padding-top: 160px; }
 
+.ml16 .letter {
+  display: inline-block;
+  line-height: 1em; }
+
 /**
  * Swiper 6.5.7
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -894,6 +898,27 @@ button.swiper-pagination-bullet {
     opacity: 1;
     left: 0; } }
 
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+.rotating {
+  -webkit-animation: rotating 2s linear infinite;
+  -moz-animation: rotating 2s linear infinite;
+  -ms-animation: rotating 2s linear infinite;
+  -o-animation: rotating 2s linear infinite;
+  animation: rotating 2s linear infinite; }
+
 /*loader classes*/
 /* hide page content by default */
 .is-loading .main,
@@ -971,6 +996,10 @@ body {
   color: #fff;
   font-weight: 400;
   text-transform: uppercase; }
+  @media (max-width: 480px) {
+    .page__heading {
+      font-size: 26px;
+      line-height: 36px; } }
 
 .color-l-gray {
   color: #a7a7a7;
@@ -1296,14 +1325,15 @@ body {
   display: flex; }
   .slide-section::before {
     content: '';
-    height: 1200px;
-    width: 1200px;
+    height: 1400px;
+    width: 1400px;
     position: absolute;
-    top: -115px;
-    left: 0;
-    background-image: url(/images/section-dots-left.png);
+    top: -205px;
+    left: -42%;
+    background-image: url(/images/dots-circle-1400.png);
     background-repeat: no-repeat;
-    opacity: 0.25; }
+    opacity: 0.25;
+    background-size: contain; }
   .slide-section__plate {
     background-image: url(/images/slide-bg.jpg);
     background-size: cover;
@@ -1432,6 +1462,16 @@ body {
       background-position: center; }
   .slide-section__prev.swiper-button-disabled {
     opacity: 0; }
+  .slide-section__circle {
+    position: absolute;
+    z-index: 200;
+    left: -40%; }
+
+.swiper-slide-active .slide-section__columns::before,
+.swiper-slide-active .slide-section::before {
+  transform: rotate(11deg);
+  transition: 2.5s ease;
+  transform-origin: center; }
 
 .social-feed {
   display: flex;
