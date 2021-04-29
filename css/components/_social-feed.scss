@@ -17,5 +17,9 @@
 
   & img {
     max-width: 185px;
+
+    @media (max-width: $widescreen) {
+      max-width: 155px;
+    }
   }
 }

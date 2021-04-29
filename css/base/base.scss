@@ -6,6 +6,10 @@ body {
   // overflow: hidden;
 }
 
+.main {
+  position: relative;
+}
+
 a {
   text-decoration: none;
 }
@@ -39,4 +43,8 @@ em {
 .ml16 .letter {
   display: inline-block;
   line-height: 1em;
+}
+
+.remove {
+  display: none;
 }

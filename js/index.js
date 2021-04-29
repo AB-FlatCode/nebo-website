@@ -4,13 +4,20 @@ const navButton = document.querySelector('#nav-toggle');
 const navOverlay = document.querySelector('#nav-overlay');
 const siteHeader = document.querySelector('.header');
 const slideNav = document.querySelector('.slide-section__navigation');
+const slideSection = document.querySelector('.slide-section');
 const slideColumns = document.querySelector('.slide-section__columns');
-/*home loader selectors*/
-const loaderInner = document.querySelector('.loader .inner');
-const loader = document.querySelector('.loader');
-const loaderContent = document.querySelector('.loader__content');
-const loaderLogo = document.querySelector('.loader-logo');
 
+/*home loader selectors*/
+const loader = document.querySelector(".loader");
+const loaderContent = document.querySelector(".loader__content");
+const loaderLogo = document.querySelector(".loader-logo");
+
+window.addEventListener("load", loadOut);
+
+function loadOut() {
+  loader.classList.add("loader-close");
+  loader.getElementsByClassName.visibility = "hidden";
+}
 
 /*Navigation*/
 
@@ -60,13 +67,14 @@ if (document.querySelector('body.page') && (window.matchMedia('screen and (max-w
 
 })();
 
+let dotsCircle = document.querySelector(".slide-section__dots");
+
 /*Home slider*/
 if (homeSlide) {
   const swiperAnimation = new SwiperAnimation();
   const swiper = new Swiper('.swiper-container', {
     direction: 'vertical',
     slidesPerView: 1,
-
     mousewheel: {
       invert: false,
       forceToAxis: true,
@@ -87,7 +95,8 @@ if (homeSlide) {
       },
       slideChange: function () {
         swiperAnimation.init(this).animate();
-      }
+        //dotsCircle.style.transform = "rotate(11deg)";
+      },
     },
     navigation: {
       nextEl: '.slide-section__next',
@@ -99,16 +108,27 @@ if (homeSlide) {
   swiper.on('transitionStart', function () {
     //console.log('*** mySwiper.realIndex', swiper.realIndex);
 
+    //dotsCircle.style.transform = "rotate(11deg)";
+
     if (swiper.realIndex == 9) {
       slideNav.classList.add('hide-slide-nav');
+      document.querySelector('.slide-section__dots').classList.add('remove');
     }
 
     if (swiper.realIndex == 8) {
       slideNav.classList.remove('hide-slide-nav');
+      document.querySelector('.slide-section__dots').classList.remove('remove');
     }
 
   });
 
+  /*Dots slide rotation*/
+  swiper.on('slidePrevTransitionStart', function () {
+
+    let activeSlide = document.querySelector('.swiper-slide-active');
+    activeSlide.querySelector('.slide-section').classList.toggle('reverse');
+
+  });
 }
 /** Enable custom scrollbar only on mobile (team-page) */
 

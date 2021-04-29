@@ -205,6 +205,10 @@
 
   &-logo img {
     width: 765px;
+
+    @media (max-width: $widescreen) {
+      width: 660px;
+    }
   }
 
   &-navigation {
@@ -224,6 +228,10 @@
       font-size: 16px;
       line-height: 28px;
       font-weight: 400;
+
+      @media (max-width: $widescreen) {
+        font-size: 15px;
+      }
 
     }
 
