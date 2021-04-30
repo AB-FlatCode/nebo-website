@@ -2,6 +2,7 @@ const bodyEl = document.querySelector('.body');
 const homeSlide = document.querySelector('.home-slide');
 const navButton = document.querySelector('#nav-toggle');
 const navOverlay = document.querySelector('#nav-overlay');
+const navCta = document.querySelector('.modal-popup');
 const siteHeader = document.querySelector('.header');
 const slideNav = document.querySelector('.slide-section__navigation');
 const slideSection = document.querySelector('.slide-section');
@@ -30,6 +31,7 @@ navButton.addEventListener('click', function () {
   navButton.classList.toggle('active');
   navOverlay.classList.toggle('open');
   siteHeader.classList.toggle('nav-active');
+  navCta.classList.add('animate__animated', 'animate__fadeInUp', 'animate__slow', 'animate__delay-1s');
   bodyEl.classList.toggle('no-scroll');
 });
 

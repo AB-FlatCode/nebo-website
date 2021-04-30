@@ -27,19 +27,19 @@
     display: flex;
     scroll-snap-align: start;
 
-    &::before {
-      content: "";
-      height: 505px;
-      width: 210px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-image: url(/images/section-dots-left.png);
-      background-repeat: no-repeat;
-      opacity: 0.25;
-      background-size: contain;
-      animation: rotate 2s ease;
-    }
+    // &::before {
+    //   content: "";
+    //   height: 505px;
+    //   width: 210px;
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   background-image: url(/images/section-dots-left.png);
+    //   background-repeat: no-repeat;
+    //   opacity: 0.25;
+    //   background-size: contain;
+    //   animation: rotate 2s ease;
+    // }
 
     &__plate {
       background-image: url(/images/slide-bg.jpg);
@@ -177,19 +177,19 @@
     display: flex;
     scroll-snap-align: start;
 
-    &::before {
-      content: "";
-      height: 505px;
-      width: 210px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-image: url(/images/section-dots-left.png);
-      background-repeat: no-repeat;
-      opacity: 0.25;
-      background-size: contain;
-      animation: rotate 2s ease;
-    }
+    // &::before {
+    //   content: "";
+    //   height: 505px;
+    //   width: 210px;
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   background-image: url(/images/section-dots-left.png);
+    //   background-repeat: no-repeat;
+    //   opacity: 0.25;
+    //   background-size: contain;
+    //   animation: rotate 2s ease;
+    // }
 
     &__plate {
       background-image: url(/images/slide-bg.jpg);

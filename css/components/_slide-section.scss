@@ -259,15 +259,21 @@
     @media (max-width: $widescreen) {
       height: 765px;
       width: 765px;
-      position: absolute;
+      position: fixed;
       top: -205px;
       left: -575px;
     }
+
+    @media (max-width: $tablet) {
+      height: 600px;
+      width: 600px;
+      position: fixed;
+      top: -146px;
+      left: -457px;
+    }
   }
 
-  @media (max-width: $mobile) {
-    display: none;
-  }
+
 
 }
 
