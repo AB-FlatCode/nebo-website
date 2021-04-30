@@ -6,17 +6,22 @@ const siteHeader = document.querySelector('.header');
 const slideNav = document.querySelector('.slide-section__navigation');
 const slideSection = document.querySelector('.slide-section');
 const slideColumns = document.querySelector('.slide-section__columns');
+const slideButtonCta = document.querySelectorAll('.button-cta');
+const slideButtonCtaImg = document.querySelector('.slide-button__cta-img');
 
 /*home loader selectors*/
 const loader = document.querySelector(".loader");
 const loaderContent = document.querySelector(".loader__content");
 const loaderLogo = document.querySelector(".loader-logo");
 
-window.addEventListener("load", loadOut);
 
-function loadOut() {
-  loader.classList.add("loader-close");
-  loader.getElementsByClassName.visibility = "hidden";
+if (document.querySelector('body.homepage')) {
+  window.addEventListener("load", loadOut);
+
+  function loadOut() {
+    loader.classList.add("loader-close");
+    loader.getElementsByClassName.visibility = "hidden";
+  }
 }
 
 /*Navigation*/
@@ -96,6 +101,8 @@ if (homeSlide) {
       slideChange: function () {
         swiperAnimation.init(this).animate();
         //dotsCircle.style.transform = "rotate(11deg)";
+
+
       },
     },
     navigation: {
@@ -120,6 +127,7 @@ if (homeSlide) {
       document.querySelector('.slide-section__dots').classList.remove('remove');
     }
 
+
   });
 
   /*Dots slide rotation*/
@@ -129,6 +137,7 @@ if (homeSlide) {
     activeSlide.querySelector('.slide-section').classList.toggle('reverse');
 
   });
+
 }
 /** Enable custom scrollbar only on mobile (team-page) */
 
@@ -138,3 +147,22 @@ if (document.querySelector('.page-team') && window.matchMedia('screen and (min-w
     autoHide: false
   });
 }
+
+/** Cta slide links (cloud rotating) */
+
+slideButtonCta.forEach(item => {
+
+  item.addEventListener("mouseenter", function (e) {
+
+    if (item.querySelector("img").classList.contains('link-rotate-reverse')) {
+      item.querySelector('img').classList.remove('link-rotate-reverse');
+    }
+    item.querySelector('img').classList.add('link-rotate');
+  });
+
+  item.addEventListener("mouseleave", function () {
+    item.querySelector('img').classList.remove('link-rotate');
+    item.querySelector('img').classList.toggle('link-rotate-reverse');
+  });
+
+});

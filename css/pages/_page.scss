@@ -119,10 +119,33 @@
   &-meta {
     position: relative;
 
+    &__feat-img {
+      position: relative;
+      z-index: 5;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 102%;
+        height: 100%;
+        background-color: $colorBlue;
+        animation: reveal 1s reverse forwards;
+        animation-delay: .5s;
+        transform-origin: top;
+      }
+    }
+
+    &__feat-img.page-meta__feat-img--gold::after {
+      background-color: $colorBrown;
+    }
+
     &__title {
       position: absolute;
       top: 25px;
       left: -60px;
+      z-index: 6;
 
       @media (max-width: $mobile) {
         left: -10px;
@@ -135,6 +158,7 @@
       width: 350px;
       bottom: 20px;
       left: -60px;
+      z-index: 6;
 
       @media (max-width: $mobile) {
         width: 250px;
@@ -150,6 +174,7 @@
       width: 350px;
       bottom: -90px;
       position: absolute;
+      z-index: 6;
 
       @media (max-width: $mobile) {
         right: 106px;
@@ -164,6 +189,7 @@
       position: absolute;
       bottom: -100px;
       right: -55px;
+      z-index: 6;
 
       @media (max-width: $widescreen) {
 

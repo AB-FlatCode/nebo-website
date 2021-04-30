@@ -27,7 +27,7 @@
       border-radius: 5px;
       padding: 15px 30px;
       position: relative;
-      z-index: 10;
+      z-index: 6;
 
       @media (max-width: $widescreen) {
         padding: 10px 30px;
@@ -178,4 +178,21 @@
       display: inline-block;
     }
   }
+}
+
+.slide-button__cta-img {
+  margin-top: -199px;
+  margin-right: 4px;
+  height: 260px;
+  opacity: .5;
+  z-index: 5;
+  transition: all .5s ease;
+}
+
+.slide-button__cta-img.link-rotate {
+  animation: link-rotate 1.5s ease-in-out;
+}
+
+.slide-button__cta-img.link-rotate-reverse {
+  animation: link-rotate-reverse 1.5s ease-in-out;
 }
